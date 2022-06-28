@@ -1,0 +1,140 @@
+button{
+    border: none;
+    background: none;
+}
+
+
+.button-effect {
+    display: flex;
+    width: 55%;
+    border: 2px solid $blanc;
+    padding: 15px 20px;
+    color: $blanc;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-size: .8em;
+    letter-spacing: 1.5px;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    border-radius: 10px;
+
+    .icon {
+        width: 30px;
+        margin-left: 10px;
+    }
+}
+
+.button-effect a {
+    color: $blanc;
+    text-decoration: none;
+    letter-spacing: 1px;
+    display: flex;
+    align-items: center;
+    font-family: $quantico;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+#button-2 {
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+#button-2 a {
+    position: relative;
+    transition: all .7s ease-Out;
+}
+
+#slide {
+    width: 100%;
+    height: 100%;
+    left: -100%;
+    background: $jaune;
+    position: absolute;
+    transition: all .7s ease-Out;
+    bottom: 0;
+}
+
+#button-2:hover #slide {
+    left: 0;
+}
+
+
+// ------------------------- BOUTON JAUNE ------------------------------
+
+.button-jaune {
+    display: flex;
+    width: 45%;
+    border: 2px solid $jaune;
+    padding: 15px 20px;
+    color: $blanc;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-size: .8em;
+    letter-spacing: 1.5px;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    border-radius: 10px;
+
+    .icon {
+        width: 30px;
+        margin-left: 10px;
+    }
+}
+
+.button-jaune a ,.button-jaune button,.button-jaune span{
+    color: $jaune;
+    text-decoration: none;
+    letter-spacing: 1px;
+    display: flex;
+    align-items: center;
+    font-family: $quantico;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+#button-2 {
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+#button-2 a,#button-2 button,#button-2 svg,#button-2 span {
+    position: relative;
+    transition: all .7s ease-Out;
+}
+
+#slide {
+    width: 100%;
+    height: 100%;
+    left: -100%;
+    background: $jaune;
+    position: absolute;
+    transition: all .7s ease-Out;
+    bottom: 0;
+}
+
+#button-2:hover #slide {
+    left: 0;
+}
+#button-2:hover a ,#button-2:hover button,#button-2:hover span{
+    color: $blanc;
+}
+
+.fleche{
+    fill: $jaune;
+}
+#button-2:hover .fleche{
+    fill: $blanc;
+}
+button{
+    a{
+        color: $jaune;
+    }
+    svg{
+        margin-left: 10px;
+    }
+}

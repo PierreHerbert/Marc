@@ -1,0 +1,82 @@
+#Login {
+    position: relative;
+    background-color: $gris-clair;
+    padding-top: 30px;
+
+    .login-container {
+        width: 80%;
+        margin: auto;
+        height: 650px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        
+
+        form {
+            padding: 50px;
+            width: 40%;
+            background-color: $blanc;
+            border-radius: 10px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            box-shadow: -4px 4px 10px black;
+            z-index: 2;
+
+            div {
+                width: 100%;
+            }
+
+            input {
+                margin-bottom: 30px;
+            }
+            input:focus{
+                border: 0.5px solid $jaune;
+                box-shadow: none;
+                background-color: #fff!important;
+            }
+
+            label {
+                font-family: $quantico;
+                font-weight: 600;
+                color: $blanc;
+            }
+
+            svg {
+                width: 30px;
+                height: auto;
+            }
+
+            .button-jaune {
+                width: 60%;
+            }
+        }
+    }
+
+    .images-background {
+        position: relative;
+        z-index: 1;
+
+        img {
+            position: absolute;
+            z-index: -1;
+        }
+
+        .burger {
+            top: -750px;
+            left: 70px;
+        }
+
+        .pizza {
+            top: -700px;
+            right: 400px;
+            width: 30%;
+        }
+
+        .frite {
+            top: -200px;
+            left: 500px;
+        }
+
+    }
+}
