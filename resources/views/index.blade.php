@@ -42,7 +42,7 @@
                         <img src="{{asset('images/shape-item-left.png')}}" alt="">
                         <img src="{{asset('images/shape-item.png')}}" alt="">
                     </div>
-                    <img src="{{asset('images/burger.png')}}">
+                    <img src="{{asset('images/'.$post->images)}}">
                     <h3>{{$post->title}}</h3>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto, illo.</p>
                 </div>

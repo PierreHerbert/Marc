@@ -56,7 +56,14 @@
         <li><a href="/roles">ROLES</a></li>
         <li><a href="/permissions">PERMISSIONS</a></li>
         <li><a href="{{route('posts.index')}}">POSTS</a></li>
+        <li><a href="{{route('categorie.index')}}">CATEGORIE</a></li>
     </ul>
+
+    <a href='/logout' class="Logout_crud">
+    Deconnexion 
+</a>
+
 </nav>
+
 
 

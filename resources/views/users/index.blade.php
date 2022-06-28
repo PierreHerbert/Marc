@@ -4,7 +4,7 @@
 
     <div class="bg-light p-4 rounded">
         <div class="lead">
-            <a href="{{ route('users.create') }}" class="btn btn-primary btn-sm float-right">Ajouter un Utilisateur</a>
+            <a href="{{ route('users.create') }}" class="btn-ajouter">Ajouter un Utilisateur</a>
         </div>
         
         <div class="mt-2">

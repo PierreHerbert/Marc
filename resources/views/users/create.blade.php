@@ -45,6 +45,27 @@
                     @endif
                 </div>
 
+                <div class="form-group form-floating mb-3">
+                    <input type="password" class="form-control" name="password" value="{{ old('password') }}" placeholder="Password" required="required">
+                    <label for="floatingPassword">Password</label>
+                    @if ($errors->has('password'))
+                        <span class="text-danger text-left">{{ $errors->first('password') }}</span>
+                    @endif
+                </div>
+
+                <div class="mb-3">
+                    <label for="role" class="form-label">Role</label>
+                    <select class="form-control" 
+                        name="role" required>
+                        @foreach($roles as $role)
+                            <option value="{{ $role->id }}">{{ $role->name }}</option>
+                        @endforeach
+                    </select>
+                    @if ($errors->has('role'))
+                        <span class="text-danger text-left">{{ $errors->first('role') }}</span>
+                    @endif
+                </div>
+
                 <button type="submit" class="btn btn-primary">Save user</button>
                 <a href="{{ route('users.index') }}" class="btn btn-default">Back</a>
             </form>

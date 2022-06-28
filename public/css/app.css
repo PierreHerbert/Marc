@@ -11995,10 +11995,12 @@ button svg {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: space-between;
   width: 20%;
   background-color: rgb(233, 233, 233);
   height: 100%;
   position: fixed;
+  box-shadow: 1px 0 5px gray;
 }
 .body-crud nav .logo {
   margin: 30px 0 20px 0;
@@ -12019,9 +12021,48 @@ button svg {
 .body-crud nav ul li a:hover {
   color: #E70E02;
 }
+.body-crud nav .Logout_crud {
+  background-color: #F2AF29;
+  color: #474747;
+  padding: 5px 15px;
+  border-radius: 10px;
+  text-decoration: none;
+  font-weight: 600;
+  font-family: "Quantico";
+  margin-bottom: 15px;
+  font-size: 20px;
+  transition: 0.3s all ease-in-out;
+}
+.body-crud nav .Logout_crud:hover {
+  box-shadow: -4px 4px 8px gray;
+  transform: scale(1.1);
+  transition: 0.3s all ease-in-out;
+}
 .body-crud section {
   width: 80%;
   margin-left: 20%;
+}
+.body-crud .lead {
+  display: flex;
+  justify-content: flex-end;
+}
+.body-crud .lead .btn-ajouter {
+  background-color: #F2AF29;
+  color: #474747;
+  padding: 5px 15px;
+  border-radius: 10px;
+  text-decoration: none;
+  font-weight: 600;
+  font-family: "Quantico";
+  margin-bottom: 15px;
+  font-size: 20px;
+  transition: 0.3s all ease-in-out;
+  text-align: right;
+}
+.body-crud .lead .btn-ajouter:hover {
+  box-shadow: -4px 4px 8px gray;
+  transform: scale(1.1);
+  transition: 0.3s all ease-in-out;
 }
 .body-crud #Posts table tr .image img {
   width: 50%;
