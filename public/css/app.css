@@ -11578,7 +11578,7 @@ button {
 
 .button-jaune {
   display: flex;
-  width: 45%;
+  width: 55%;
   border: 2px solid #F2AF29;
   padding: 15px 20px;
   color: #ffffff;
@@ -11788,10 +11788,10 @@ button svg {
           animation: grossir 2s linear infinite;
 }
 #Index .blog .container-slider .item img {
-  width: 80%;
-  height: auto;
-  -o-object-fit: cover;
-     object-fit: cover;
+  width: 325px;
+  height: 275px;
+  -o-object-fit: contain;
+     object-fit: contain;
   margin-bottom: 50px;
 }
 #Index .blog .container-slider .item .wave {
@@ -11957,7 +11957,7 @@ button svg {
 #Login .login-container form label {
   font-family: "Quantico";
   font-weight: 600;
-  color: #ffffff;
+  color: #000000;
 }
 #Login .login-container form svg {
   width: 30px;
@@ -11988,15 +11988,75 @@ button svg {
   left: 500px;
 }
 
+.tox .tox-statusbar {
+  display: none !important;
+}
+
 .body-crud {
   display: flex;
+}
+.body-crud .btn-crud {
+  width: 20%;
+}
+.body-crud tr {
+  width: 100%;
+}
+.body-crud .button-effect .button {
+  display: flex;
+  width: 55%;
+  border: 2px solid #ffffff;
+  padding: 15px 20px;
+  color: #ffffff;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-size: 0.8em;
+  letter-spacing: 1.5px;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  border-radius: 10px;
+}
+.body-crud .button-effect .button .icon {
+  width: 30px;
+  margin-left: 10px;
+}
+.body-crud .button-effect a {
+  color: #ffffff;
+  text-decoration: none;
+  letter-spacing: 1px;
+  display: flex;
+  align-items: center;
+  font-family: "Quantico";
+  font-size: 16px;
+  font-weight: 600;
+}
+.body-crud .button-effect #button-2 {
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+}
+.body-crud .button-effect #button-2 a {
+  position: relative;
+  transition: all 0.7s ease-Out;
+}
+.body-crud .button-effect #slide {
+  width: 100%;
+  height: 100%;
+  left: -100%;
+  background: #F2AF29;
+  position: absolute;
+  transition: all 0.7s ease-Out;
+  bottom: 0;
+}
+.body-crud .button-effect #button-2:hover #slide {
+  left: 0;
 }
 .body-crud nav {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
-  width: 20%;
+  width: 15%;
   background-color: rgb(233, 233, 233);
   height: 100%;
   position: fixed;
@@ -12039,8 +12099,8 @@ button svg {
   transition: 0.3s all ease-in-out;
 }
 .body-crud section {
-  width: 80%;
-  margin-left: 20%;
+  width: 85%;
+  margin-left: 15%;
 }
 .body-crud .lead {
   display: flex;
@@ -12064,9 +12124,51 @@ button svg {
   transform: scale(1.1);
   transition: 0.3s all ease-in-out;
 }
+.body-crud #Posts .container-boutons {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-bottom: 40px;
+}
+.body-crud #Posts .container-boutons .ajouter a {
+  background: linear-gradient(90deg, #E70E02 0%, #F44E01 99.99%, #FF8A00 100%);
+  text-decoration: none;
+  color: #ffffff;
+  font-family: "Quantico";
+  font-size: 20px;
+  padding: 5px 15px;
+  border-radius: 5px;
+}
+.body-crud #Posts .container-boutons .ajouter a:hover {
+  color: #474747;
+}
+.body-crud #Posts .container-boutons select {
+  border: 2px solid #F2AF29;
+  border-radius: 10px;
+  color: #F2AF29;
+  font-family: "Quantico";
+  font-size: 20px;
+  padding: 10px 20px;
+}
+.body-crud #Posts .container-boutons select:focus-visible {
+  outline-color: #F2AF29;
+}
 .body-crud #Posts table tr .image img {
   width: 50%;
   height: auto;
   margin: auto;
+}
+.body-crud #Posts .container-show {
+  display: flex;
+}
+.body-crud #Posts .container-show .show-texte {
+  width: 60%;
+}
+.body-crud #Posts .container-show .show-image {
+  width: 30%;
+}
+.body-crud #Posts .container-show .show-image img {
+  width: 100%;
+  height: auto;
 }
 

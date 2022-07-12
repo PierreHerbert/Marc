@@ -1,6 +1,7 @@
 @include('crud.partials.header')
 
-<section>
+<x-head.tinymce-config/>
+<section id="Posts">
     <div class="bg-light p-4 rounded">
         <h2>Add new post</h2>
         <div class="lead">
@@ -55,9 +56,7 @@
 
                 <div class="mb-3">
                     <label for="body" class="form-label">Body</label>
-                    <textarea class="form-control" 
-                        name="body" 
-                        placeholder="Body" required>{{ old('body') }}</textarea>
+                    <textarea id="myeditorinstance" name="body">Hello, World!</textarea>
 
                     @if ($errors->has('body'))
                         <span class="text-danger text-left">{{ $errors->first('body') }}</span>

@@ -20,7 +20,7 @@ class PostsController extends Controller
         $posts = Post::latest()->paginate(10);
         
 
-        return view('posts.index', compact('posts'));
+        return view('posts.index', compact('posts'),compact('categories'));
     }
 
     /**
@@ -64,9 +64,10 @@ class PostsController extends Controller
      */
     public function show(Post $post)
     {
+        $categories = Categorie::get();
         return view('posts.show', [
             'post' => $post
-        ]);
+        ],compact('categories'));
     }
 
     /**
@@ -77,9 +78,10 @@ class PostsController extends Controller
      */
     public function edit(Post $post)
     {
+        $categories = Categorie::latest()->get();
         return view('posts.edit', [
             'post' => $post
-        ]);
+        ],compact('categories'));
     }
 
     /**
@@ -93,14 +95,20 @@ class PostsController extends Controller
     {
 
         $image = $request->file('images');
-        $image_name = $image->getClientOriginalName();
-        $image->move(public_path('images/posts'),$image_name); 
+        if ($image != null){
+            $image_name = $image->getClientOriginalName();
+            $image->move(public_path('images/posts'),$image_name); 
+        }
+        else{
+            $image_name = $post->images;
+        }
         $post->update(array_merge($request->only('title', 'description', 'body'),[
             'images' => $image_name,
+            'categorie_id' => $request->get('categorie')
         ]));
 
         return redirect()->route('posts.index')
-            ->withSuccess(__('Post updated successfully.'));
+            ->withSuccess(__("l'article à bien été modifier"));
     }
 
     /**

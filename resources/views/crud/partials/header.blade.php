@@ -9,9 +9,9 @@
     <link href="https://fonts.googleapis.com/css2?family=Overlock:wght@400;700;900&family=Quantico:wght@400;700&display=swap" rel="stylesheet">
     <link rel="icon" type="image/png" href="{{asset('images/logo.png')}}" />
     @if(Route::current()->getName() == 'index')
-        <title> BIG BURGER</title>
+        <title> MARC'S</title>
     @else
-    <title>BigBurger | {{ Request::segment(1) }}</title>
+    <title>MARC'S | {{ Request::segment(1) }}</title>
     @endif
 </head>
 @include('layouts.auth-master')
@@ -56,12 +56,13 @@
         <li><a href="/roles">ROLES</a></li>
         <li><a href="/permissions">PERMISSIONS</a></li>
         <li><a href="{{route('posts.index')}}">POSTS</a></li>
-        <li><a href="{{route('categorie.index')}}">CATEGORIE</a></li>
+        <li><a href="{{route('categorie.index')}}">CATEGORIES</a></li>
     </ul>
 
-    <a href='/logout' class="Logout_crud">
-    Deconnexion 
-</a>
+    <div class="button-jaune" id="button-2">
+                <div id="slide"></div>
+                <a href="/logout">DÉCONNEXION</a>
+            </div>
 
 </nav>
 

@@ -1,6 +1,7 @@
 @include('crud.partials.header')
 
-<section>
+<x-head.tinymce-config/>
+<section id="Posts">
     <div class="bg-light p-4 rounded">
         <h2>Update post</h2>
         <div class="lead">
@@ -26,17 +27,26 @@
                 </div>
 
                 <div class="mb-3">
-                    <label for="images" class="form-label">Image</label>
-                    <input value="{{ $post->image }}" 
+                    <label for="images" class="form-label">Images</label>
+                    <input value="{{$post->images}}" 
                         type="file" 
                         class="form-control" 
-                        name="images" 
-                        placeholder="images" required>
+                        name="images" >
 
                     @if ($errors->has('images'))
                         <span class="text-danger text-left">{{ $errors->first('images') }}</span>
                     @endif
                 </div>
+
+                <select name="categorie" id="categorie-select">
+                    @foreach ($categories as $key => $categorie)
+                        @if($post->categorie_id == $categorie->id)
+                            <option value="{{$categorie->id}}" selected>{{$categorie->nom}}</option>
+                        @else
+                        <option value="{{$categorie->id}}" >{{$categorie->nom}}</option>
+                        @endif
+                    @endforeach
+                </select>
 
                 <div class="mb-3">
                     <label for="description" class="form-label">Description</label>
@@ -50,14 +60,9 @@
                         <span class="text-danger text-left">{{ $errors->first('description') }}</span>
                     @endif
                 </div>
-
                 <div class="mb-3">
                     <label for="body" class="form-label">Body</label>
-                    <textarea
-                        type="text" 
-                        class="form-control" 
-                        name="body" 
-                        placeholder="Body" required>{{ $post->body }}</textarea>
+                    <textarea id="myeditorinstance" name="body">{{$post->body}}</textarea>
 
                     @if ($errors->has('body'))
                         <span class="text-danger text-left">{{ $errors->first('body') }}</span>
