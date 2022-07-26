@@ -1,17 +1,84 @@
-.tox .tox-statusbar{
-    display: none!important;
+.tox .tox-statusbar {
+    display: none !important;
 }
-.body-crud{
+
+.p-4{
+    padding-bottom: 10px!important;
+}
+.alert{
+    position: absolute;
+    z-index: 10;
+    left: 40%;
+    top: 15px;
+    width: 40%;
+}
+
+.body-crud {
+    background-color: #f5f5f5;
     display: flex;
+    section {
+        width: 85%;
+        margin-left: 15%;
+    }
+    .table{
+        border-collapse: initial!important;
+    }
+    table::-webkit-scrollbar{
+       background-color: $blanc;border-radius:  0 10px 10px 0;
+       width: 10px;
+    }
+    table::-webkit-scrollbar-thumb{
+        background-color: $jaune;
+        border-radius:  10px;
+        height: 20px;
+    }
+    table{
+        display: block;
+        margin-top: 30px;
+        background-color: $blanc;
+        border-radius: 10px;
+        padding: 15px;
+        box-shadow: -4px 4px 15px -13px gray;
+        overflow-y: scroll ;
+        max-height: 800px;
+       
+        
+        thead{
+            position: sticky;
+            top: -20px;
+            background-color: $blanc;
+            height: 80px;
+        }
+        tr{
+            vertical-align: middle;
+            border: 0px solid transparent;
+        }
+        th{
+            font-family: $quantico;
+            font-size: 22px;
+            font-weight: 400;
+        }
+        td{
+            font-family: $overlock;
+            font-size: 18px;
+            font-weight: 400;
+            line-height: 50px;
+        }
+        tr:last-child{
+            border: 0px solid transparent!important;
+        }
+    }
 
     //bouton base
-    .btn-crud{
+    .btn-crud {
         width: 20%;
     }
-    tr{
+
+    tr {
         width: 100%;
     }
-    .button-effect{
+
+    .button-effect {
         .button {
             display: flex;
             width: 55%;
@@ -26,14 +93,14 @@
             justify-content: center;
             overflow: hidden;
             border-radius: 10px;
-    
+
             .icon {
                 width: 30px;
                 margin-left: 10px;
             }
         }
-        
-    
+
+
         a {
             color: $blanc;
             text-decoration: none;
@@ -44,18 +111,18 @@
             font-size: 16px;
             font-weight: 600;
         }
-    
+
         #button-2 {
             position: relative;
             overflow: hidden;
             cursor: pointer;
         }
-    
+
         #button-2 a {
             position: relative;
             transition: all .7s ease-Out;
         }
-    
+
         #slide {
             width: 100%;
             height: 100%;
@@ -65,163 +132,257 @@
             transition: all .7s ease-Out;
             bottom: 0;
         }
-    
+
         #button-2:hover #slide {
             left: 0;
         }
     }
-   
+
+    .actions{
+        width: 1%;
+        svg{
+            width: 20px;
+            height: 25px;
+            margin: 0;
+            path{
+                fill: $blanc;
+            }
+        }
+    }
 
     //-----------
-    nav{
+    nav {
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: space-between;
         width: 15%;
-        background-color: rgb(233, 233, 233);
+        background-color: $blanc;
         height: 100%;
         position: fixed;
-        box-shadow: 1px 0 5px gray ;
-        .logo{
-            margin: 30px 0 20px 0;
-            img{
-                width: 50%;
+        box-shadow: 1px 0 5px -5px gray;
+        padding-bottom: 25px;
+
+        .logo-menu {
+            width: 100%;
+    
+
+            .logo {
+                margin: 30px 0 40px 0;
+                width: 100%;
+                height: auto;
+
+                img {
+                    width: 80%;
+                    height: auto;
+                    margin: auto;
+                }
+            }
+
+            ul {
+                list-style: none;
+                width: 100%;
+                padding: 0;
+                .active{
+                    a{
+                        color: $blanc;
+                    }
+                    .hover-menu{
+                        display: flex;
+                        width: 102%;
+                        img{
+                            display: block;
+                        }
+                    }
+                    
+                    svg path{
+                        fill:$blanc;
+                    }
+                }
+                li {
+                    position: relative;
+                    width: 100%;
+                    padding-left: 50px;
+                    padding-top: 5px;
+                    margin-bottom: 10px;
+                    display: flex;
+                    align-items: center;
+
+                    a {
+                        text-decoration: none;
+                        color: $noir;
+                        font-family: $quantico;
+                        font-size: 20px;
+                        &:hover{
+                        color: $blanc;
+                        }
+                        &:hover ~ .hover-menu{
+                            display: flex;
+                        }
+                        svg{
+                            margin-right: 10px;
+                            width: 30px;
+                            height: auto;
+                        }
+                        &:hover svg path{
+                            fill:$blanc;
+                        }
+                    }
+
+                    .hover-menu {
+                        position: absolute;
+                        background-color: $rouge;
+                        width: 100%;
+                        height: 42px;
+                        top: 0;
+                        left: 0;
+                        z-index: -1;
+                        display: none;
+                        justify-content: flex-end;
+                        img{
+                            width: 30px;
+                            height: 42px;
+                            display: none;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .Logout_crud {
+        background-color: $jaune;
+        color: $gris;
+        padding: 5px 15px;
+        border-radius: 10px;
+        text-decoration: none;
+        font-weight: 600;
+        font-family: $quantico;
+        margin-bottom: 15px;
+        font-size: 20px;
+        transition: 0.3s all ease-in-out;
+
+        &:hover {
+            box-shadow: -4px 4px 8px gray;
+            transform: scale(1.1);
+            transition: 0.3s all ease-in-out;
+        }
+    }
+}
+
+
+
+
+.lead {
+    display: flex;
+    justify-content: flex-end;
+
+    .btn-ajouter {
+        background-color: $jaune;
+        color: $gris;
+        padding: 5px 15px;
+        border-radius: 10px;
+        text-decoration: none;
+        font-weight: 600;
+        font-family: $quantico;
+        margin-bottom: 15px;
+        font-size: 20px;
+        transition: 0.3s all ease-in-out;
+        text-align: right;
+
+        &:hover {
+            box-shadow: -4px 4px 8px gray;
+            transform: scale(1.1);
+            transition: 0.3s all ease-in-out;
+        }
+
+    }
+}
+
+
+// ____________________________ POSTS ____________________________
+#Posts {
+    .container-boutons {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .ajouter {
+            a {
+                background: linear-gradient(90deg, #E70E02 0%, #F44E01 99.99%, #FF8A00 100%);
+                text-decoration: none;
+                color: $blanc;
+                font-family: $quantico;
+                font-size: 20px;
+                border-radius: 5px;
+
+                &:hover {
+                    color: $gris;
+                }
+            }
+        }
+
+        select {
+            border: 2px solid $jaune;
+            border-radius: 10px;
+            color: $jaune;
+            font-family: $quantico;
+            font-size: 20px;
+            padding: 5px 10px;
+
+            &:focus-visible {
+                outline-color: $jaune;
+            }
+        }
+    }
+
+    table {
+        tr {
+            .numero {}
+
+            .titre {}
+
+            .image {
+
+                img {
+                    width: 30%;
+                    height: auto;
+                    margin: auto;
+                }
+            }
+
+            .description {}
+
+            .actions {}
+        }
+
+    }
+
+    .container-show {
+        display: flex;
+
+        .show-texte {
+            width: 60%;
+        }
+
+        .show-image {
+            width: 30%;
+
+            img {
+                width: 100%;
                 height: auto;
             }
         }
-        ul{
-            list-style: none;
-            li{
-                a{
-                    text-decoration: none;
-                    color: $noir;
-                    font-family: $quantico;
-                    font-size: 20px;
-                }
-                a:hover{
-                    color: $rouge;
-                }
-            }
-        }
-        .Logout_crud{
-            background-color: $jaune;
-            color: $gris;
-            padding: 5px 15px;
-            border-radius: 10px;
-            text-decoration: none;
-            font-weight: 600;
-            font-family: $quantico;
-            margin-bottom: 15px;
-            font-size: 20px;
-            transition: 0.3s all ease-in-out;
-            &:hover{
-                box-shadow: -4px 4px 8px gray;
-                transform: scale(1.1);
-                transition: 0.3s all ease-in-out;
-            }
-        }
     }
-    
-
-    section{
-        width: 85%;
-        margin-left: 15%;
-    }
-    .lead{
-        display: flex;
-        justify-content: flex-end;
-        .btn-ajouter{
-            background-color: $jaune;
-            color: $gris;
-            padding: 5px 15px;
-            border-radius: 10px;
-            text-decoration: none;
-            font-weight: 600;
-            font-family: $quantico;
-            margin-bottom: 15px;
-            font-size: 20px;
-            transition: 0.3s all ease-in-out;
-            text-align: right;
-            &:hover{
-                box-shadow: -4px 4px 8px gray;
-                transform: scale(1.1);
-                transition: 0.3s all ease-in-out;
-            }
-    
-        }
-    }
-    
-
-    // ____________________________ POSTS ____________________________
-        #Posts{
-            .container-boutons{
-                display: flex; 
-                justify-content: space-around;
-                align-items: center;
-                margin-bottom: 40px;
-                 .ajouter{
-                    a{
-                        background: linear-gradient(90deg, #E70E02 0%, #F44E01 99.99%, #FF8A00 100%);
-                        text-decoration: none;
-                        color: $blanc;
-                        font-family: $quantico;
-                        font-size: 20px;
-                        padding: 5px 15px;
-                        border-radius: 5px;
-                        &:hover{
-                            color: $gris;
-                        }
-                    }
-                }
-                select{
-                    border:2px solid $jaune;
-                    border-radius: 10px;
-                    color: $jaune;
-                    font-family: $quantico;
-                    font-size: 20px;
-                    padding: 10px 20px;
-                    &:focus-visible{
-                        outline-color: $jaune;
-                    }
-                }
-            }
-           
-            table{
-                tr{
-                    .numero{
-                       
-                    }
-                    .titre{
-                       
-                    }
-                    .image{
-                        
-                        img{
-                            width: 50%;
-                            height: auto;
-                            margin: auto;
-                        }
-                    }
-                    .description{
-                        
-                    }
-                    .actions{
-                        
-                    }
-                }
-               
-            }
-
-            .container-show{
-                display: flex;
-                .show-texte{width:60%;}
-                .show-image{width: 30%;
-                img{
-                    width: 100%;
-                    height: auto;
-                }}
-            }
-        }
-    //________________________________________________________________
 }
+
+//________________________________________________________________
+
+
+
+// ____________________________ USERS ____________________________
+
+
+
+
+//________________________________________________________________

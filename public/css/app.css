@@ -11311,10 +11311,11 @@ nav {
 }
 
 .nav-link {
+  width: 50%;
   color: #E70E02;
   font-weight: 600;
   margin: 20px 0;
-  padding: 0 30px !important;
+  padding: 0 15px !important;
   border-right: 2px solid white;
   font-size: 20px;
   font-family: "Overlock";
@@ -11392,7 +11393,7 @@ nav {
 
 footer {
   background-color: #474747;
-  z-index: 9;
+  z-index: 99;
 }
 footer .footer-container {
   display: flex;
@@ -11528,7 +11529,7 @@ button {
   color: #ffffff;
   text-transform: uppercase;
   text-decoration: none;
-  font-size: 0.8em;
+  font-size: 15px;
   letter-spacing: 1.5px;
   align-items: center;
   justify-content: center;
@@ -11547,7 +11548,7 @@ button {
   display: flex;
   align-items: center;
   font-family: "Quantico";
-  font-size: 16px;
+  font-size: 15px;
   font-weight: 600;
 }
 
@@ -11580,11 +11581,11 @@ button {
   display: flex;
   width: 55%;
   border: 2px solid #F2AF29;
-  padding: 15px 20px;
+  padding: 10px 0px;
   color: #ffffff;
   text-transform: uppercase;
   text-decoration: none;
-  font-size: 0.8em;
+  font-size: 15px;
   letter-spacing: 1.5px;
   align-items: center;
   justify-content: center;
@@ -11603,7 +11604,7 @@ button {
   display: flex;
   align-items: center;
   font-family: "Quantico";
-  font-size: 16px;
+  font-size: 15px;
   font-weight: 600;
 }
 
@@ -11812,6 +11813,8 @@ button svg {
   text-align: center;
   font-family: "Overlock";
   color: #000000;
+  width: 90%;
+  margin: auto;
 }
 #Index .blog .container-slider .item .container-shapes {
   width: 80%;
@@ -11992,8 +11995,73 @@ button svg {
   display: none !important;
 }
 
+.p-4 {
+  padding-bottom: 10px !important;
+}
+
+.alert {
+  position: absolute;
+  z-index: 10;
+  left: 40%;
+  top: 15px;
+  width: 40%;
+}
+
 .body-crud {
+  background-color: #f5f5f5;
   display: flex;
+}
+.body-crud section {
+  width: 85%;
+  margin-left: 15%;
+}
+.body-crud .table {
+  border-collapse: initial !important;
+}
+.body-crud table::-webkit-scrollbar {
+  background-color: #ffffff;
+  border-radius: 0 10px 10px 0;
+  width: 10px;
+}
+.body-crud table::-webkit-scrollbar-thumb {
+  background-color: #F2AF29;
+  border-radius: 10px;
+  height: 20px;
+}
+.body-crud table {
+  display: block;
+  margin-top: 30px;
+  background-color: #ffffff;
+  border-radius: 10px;
+  padding: 15px;
+  box-shadow: -4px 4px 15px -13px gray;
+  overflow-y: scroll;
+  max-height: 800px;
+}
+.body-crud table thead {
+  position: -webkit-sticky;
+  position: sticky;
+  top: -20px;
+  background-color: #ffffff;
+  height: 80px;
+}
+.body-crud table tr {
+  vertical-align: middle;
+  border: 0px solid transparent;
+}
+.body-crud table th {
+  font-family: "Quantico";
+  font-size: 22px;
+  font-weight: 400;
+}
+.body-crud table td {
+  font-family: "Overlock";
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 50px;
+}
+.body-crud table tr:last-child {
+  border: 0px solid transparent !important;
 }
 .body-crud .btn-crud {
   width: 20%;
@@ -12051,37 +12119,106 @@ button svg {
 .body-crud .button-effect #button-2:hover #slide {
   left: 0;
 }
+.body-crud .actions {
+  width: 1%;
+}
+.body-crud .actions svg {
+  width: 20px;
+  height: 25px;
+  margin: 0;
+}
+.body-crud .actions svg path {
+  fill: #ffffff;
+}
 .body-crud nav {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
   width: 15%;
-  background-color: rgb(233, 233, 233);
+  background-color: #ffffff;
   height: 100%;
   position: fixed;
-  box-shadow: 1px 0 5px gray;
+  box-shadow: 1px 0 5px -5px gray;
+  padding-bottom: 25px;
 }
-.body-crud nav .logo {
-  margin: 30px 0 20px 0;
+.body-crud nav .logo-menu {
+  width: 100%;
 }
-.body-crud nav .logo img {
-  width: 50%;
+.body-crud nav .logo-menu .logo {
+  margin: 30px 0 40px 0;
+  width: 100%;
   height: auto;
 }
-.body-crud nav ul {
-  list-style: none;
+.body-crud nav .logo-menu .logo img {
+  width: 80%;
+  height: auto;
+  margin: auto;
 }
-.body-crud nav ul li a {
+.body-crud nav .logo-menu ul {
+  list-style: none;
+  width: 100%;
+  padding: 0;
+}
+.body-crud nav .logo-menu ul .active a {
+  color: #ffffff;
+}
+.body-crud nav .logo-menu ul .active .hover-menu {
+  display: flex;
+  width: 102%;
+}
+.body-crud nav .logo-menu ul .active .hover-menu img {
+  display: block;
+}
+.body-crud nav .logo-menu ul .active svg path {
+  fill: #ffffff;
+}
+.body-crud nav .logo-menu ul li {
+  position: relative;
+  width: 100%;
+  padding-left: 50px;
+  padding-top: 5px;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+}
+.body-crud nav .logo-menu ul li a {
   text-decoration: none;
   color: #000000;
   font-family: "Quantico";
   font-size: 20px;
 }
-.body-crud nav ul li a:hover {
-  color: #E70E02;
+.body-crud nav .logo-menu ul li a:hover {
+  color: #ffffff;
 }
-.body-crud nav .Logout_crud {
+.body-crud nav .logo-menu ul li a:hover ~ .hover-menu {
+  display: flex;
+}
+.body-crud nav .logo-menu ul li a svg {
+  margin-right: 10px;
+  width: 30px;
+  height: auto;
+}
+.body-crud nav .logo-menu ul li a:hover svg path {
+  fill: #ffffff;
+}
+.body-crud nav .logo-menu ul li .hover-menu {
+  position: absolute;
+  background-color: #E70E02;
+  width: 100%;
+  height: 42px;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  display: none;
+  justify-content: flex-end;
+}
+.body-crud nav .logo-menu ul li .hover-menu img {
+  width: 30px;
+  height: 42px;
+  display: none;
+}
+.body-crud .Logout_crud {
   background-color: #F2AF29;
   color: #474747;
   padding: 5px 15px;
@@ -12093,20 +12230,17 @@ button svg {
   font-size: 20px;
   transition: 0.3s all ease-in-out;
 }
-.body-crud nav .Logout_crud:hover {
+.body-crud .Logout_crud:hover {
   box-shadow: -4px 4px 8px gray;
   transform: scale(1.1);
   transition: 0.3s all ease-in-out;
 }
-.body-crud section {
-  width: 85%;
-  margin-left: 15%;
-}
-.body-crud .lead {
+
+.lead {
   display: flex;
   justify-content: flex-end;
 }
-.body-crud .lead .btn-ajouter {
+.lead .btn-ajouter {
   background-color: #F2AF29;
   color: #474747;
   padding: 5px 15px;
@@ -12119,56 +12253,170 @@ button svg {
   transition: 0.3s all ease-in-out;
   text-align: right;
 }
-.body-crud .lead .btn-ajouter:hover {
+.lead .btn-ajouter:hover {
   box-shadow: -4px 4px 8px gray;
   transform: scale(1.1);
   transition: 0.3s all ease-in-out;
 }
-.body-crud #Posts .container-boutons {
+
+#Posts .container-boutons {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
-  margin-bottom: 40px;
 }
-.body-crud #Posts .container-boutons .ajouter a {
+#Posts .container-boutons .ajouter a {
   background: linear-gradient(90deg, #E70E02 0%, #F44E01 99.99%, #FF8A00 100%);
   text-decoration: none;
   color: #ffffff;
   font-family: "Quantico";
   font-size: 20px;
-  padding: 5px 15px;
   border-radius: 5px;
 }
-.body-crud #Posts .container-boutons .ajouter a:hover {
+#Posts .container-boutons .ajouter a:hover {
   color: #474747;
 }
-.body-crud #Posts .container-boutons select {
+#Posts .container-boutons select {
   border: 2px solid #F2AF29;
   border-radius: 10px;
   color: #F2AF29;
   font-family: "Quantico";
   font-size: 20px;
-  padding: 10px 20px;
+  padding: 5px 10px;
 }
-.body-crud #Posts .container-boutons select:focus-visible {
+#Posts .container-boutons select:focus-visible {
   outline-color: #F2AF29;
 }
-.body-crud #Posts table tr .image img {
-  width: 50%;
+#Posts table tr .image img {
+  width: 30%;
   height: auto;
   margin: auto;
 }
-.body-crud #Posts .container-show {
+#Posts .container-show {
   display: flex;
 }
-.body-crud #Posts .container-show .show-texte {
+#Posts .container-show .show-texte {
   width: 60%;
 }
-.body-crud #Posts .container-show .show-image {
+#Posts .container-show .show-image {
   width: 30%;
 }
-.body-crud #Posts .container-show .show-image img {
+#Posts .container-show .show-image img {
   width: 100%;
   height: auto;
+}
+
+#blog {
+  padding-top: 170px;
+  background-image: url(/images/background-blog.png?0e8371307e8d5fa628b6ecc1af4eb9db);
+  background-size: contain;
+  padding-bottom: 50px;
+  position: relative;
+}
+#blog .draw {
+  position: absolute;
+  z-index: 0;
+}
+#blog .burger {
+  top: -170px;
+  left: 50px;
+}
+#blog .pizza {
+  bottom: -50px;
+  right: 10px;
+}
+#blog .salade {
+  left: -30px;
+}
+#blog .tomate {
+  right: 0;
+  top: -50px;
+}
+#blog .container-blog {
+  width: 80%;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 25px;
+  padding-bottom: 25px;
+}
+#blog .container-blog .item {
+  transform: translate(0%, 0%);
+  width: 22%;
+  height: 415px;
+  overflow: hidden;
+  transition: all 300ms ease-in-out;
+  background-color: #ffffff;
+  border-radius: 10px;
+  padding: 25px 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: -5px 5px 20px rgba(255, 255, 255, 0.25);
+}
+#blog .container-blog .item:hover {
+  cursor: pointer;
+  box-shadow: none;
+}
+#blog .container-blog .item:hover .wave {
+  top: -35%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+#blog .container-blog .item:hover .container-shapes img {
+  display: block;
+  -webkit-animation: grossir 2s linear infinite;
+          animation: grossir 2s linear infinite;
+}
+#blog .container-blog .item img {
+  width: 250px;
+  height: 200px;
+  -o-object-fit: contain;
+     object-fit: contain;
+  margin-bottom: 50px;
+}
+#blog .container-blog .item .wave {
+  position: absolute;
+  width: 100%;
+  top: -100%;
+  z-index: -1;
+  height: 100%;
+  transition: all 0.5s ease-in-out;
+}
+#blog .container-blog .item h3, #blog .container-blog .item .h3 {
+  font-family: "Quantico";
+  font-weight: 600;
+  color: #474747;
+  text-align: center;
+}
+#blog .container-blog .item p {
+  text-align: center;
+  font-family: "Overlock";
+  color: #000000;
+  width: 90%;
+  margin: auto;
+}
+#blog .container-blog .item .container-shapes {
+  width: 80%;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  position: absolute;
+}
+#blog .container-blog .item .container-shapes img {
+  width: 40px;
+  height: auto;
+  display: none;
+  transition: all 0.5s linear;
+}
+#blog .pagination-container {
+  justify-content: center;
+  display: flex;
+}
+#blog .pagination-container nav ul {
+  margin: 0;
+}
+#blog .pagination-container nav ul .disabled {
+  display: none;
 }
 

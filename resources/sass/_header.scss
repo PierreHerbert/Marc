@@ -28,10 +28,11 @@ nav{
 }
 
 .nav-link {
+    width: 50%;
     color: $rouge;
     font-weight: 600;
     margin: 20px 0;
-    padding: 0 30px !important;
+    padding: 0 15px !important;
     border-right: 2px solid white;
     font-size: 20px;
     font-family: $overlock;

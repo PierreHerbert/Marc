@@ -1,0 +1,136 @@
+#blog{
+    padding-top: 170px;
+    background-image: url('../../public/images/background-blog.png');
+    background-size: contain;
+    padding-bottom: 50px;
+    position: relative;
+    .draw{
+        position: absolute;
+        z-index: 0;
+    }
+    .burger{
+        top: -170px;
+        left: 50px;
+    }
+    .pizza{
+        bottom: -50px;
+        right:10px
+    }
+    .salade{
+        left: -30px;
+    }
+    .tomate{
+        right: 0;
+        top: -50px;
+    }
+    .container-blog{
+        width: 80%;
+        margin:auto;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap:25px;
+        padding-bottom: 25px;
+
+         .item {
+            transform: translate(0%, 0%);
+            width: 22%;
+            height: 415px;
+            overflow: hidden;
+            transition: all 300ms ease-in-out;
+            background-color: $blanc;
+            border-radius: 10px;
+            padding: 25px 10px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            box-shadow: -5px 5px 20px rgba(255, 255, 255, 0.25);
+
+        }
+
+        .item:hover {
+            cursor: pointer;
+            box-shadow: none;
+
+            .wave {
+                top: -35%;
+                object-fit: cover;
+
+            }
+
+            .container-shapes {
+                img {
+                    display: block;
+                    animation: grossir 2s linear infinite;
+                }
+            }
+        }
+
+        .item {
+            
+                img {
+                width: 250px;
+                height: 200px;
+                object-fit: contain;
+                margin-bottom: 50px;
+                }
+            
+            
+
+            .wave {
+                position: absolute;
+                width: 100%;
+                top: -100%;
+                z-index: -1;
+                height: 100%;
+                transition: all 0.5s ease-in-out;
+            }
+
+            h3 {
+                font-family: $quantico;
+                font-weight: 600;
+                color: $gris;
+                text-align: center;
+            }
+
+            p {
+                text-align: center;
+                font-family: $overlock;
+                color: $noir;
+                width: 90%;
+                margin: auto;
+            }
+
+            .container-shapes {
+                width: 80%;
+                margin: auto;
+                display: flex;
+                justify-content: space-between;
+                position: absolute;
+
+                img {
+                    width: 40px;
+                    height: auto;
+                    display: none;
+                    transition: all 0.5s linear;
+
+                }
+            }
+        }
+    }
+
+    .pagination-container{
+        justify-content: center;
+        display: flex;
+
+        nav{
+            ul{
+                margin: 0;
+                .disabled{
+                    display:none;
+                }
+            }
+        }
+    }
+
+}

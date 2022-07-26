@@ -39,7 +39,8 @@
                         type="text" 
                         class="form-control" 
                         name="description" 
-                        placeholder="Description" required>
+                        placeholder="Description"
+                        maxlength = "120" required>
 
                     @if ($errors->has('description'))
                         <span class="text-danger text-left">{{ $errors->first('description') }}</span>

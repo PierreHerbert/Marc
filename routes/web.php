@@ -19,7 +19,8 @@ Route::group(['namespace' => 'App\Http\Controllers'], function()
      * Home Routes
      */
     Route::get('/', 'HomeController@index')->name('index');
-    Route::get('/AdminPanel', 'CrudController@index')->name('AdminPanel');
+    Route::get('/blog', 'BlogController@index')->name('blog'); 
+    
 
     Route::group(['middleware' => ['guest']], function() {
         /**
@@ -34,6 +35,10 @@ Route::group(['namespace' => 'App\Http\Controllers'], function()
         Route::get('/AdminConnexion', 'LoginController@show')->name('login.show');
         Route::post('/AdminConnexion', 'LoginController@login')->name('login.perform');
 
+    });
+
+    Route::group(['middleware' => ['auth']], function() {
+        Route::get('/AdminPanel', 'CrudController@index')->name('AdminPanel');
     });
 
     Route::group(['middleware' => ['auth', 'permission']], function() {
