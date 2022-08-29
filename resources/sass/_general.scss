@@ -138,3 +138,38 @@ button{
         margin-left: 10px;
     }
 }
+
+//-------------------------------------
+
+// ----------- HEAD TITRE -------------
+
+.titre-head{
+    position: absolute;
+    z-index: 2;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -100%);
+    width: 40%;
+    img{}
+    h1{position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: #F2AF29;
+    font-family: $overlock;
+font-weight: 600;}
+}
+
+//-------------------------------------
+
+// ---
+
+.show-actions{
+    list-style: none;
+    display: flex;
+    li{
+        margin-right: 35px;
+    }
+}
+
+// ---

@@ -1,6 +1,42 @@
 // ------------------ HEADER -----------------------------
 nav {
     background-color: $blanc;
+    .nav-item {
+        position: relative;
+        text-align: center;
+        
+      }
+      
+      .nav-item::before, .nav-item::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        right: 0;
+        height: 2px;
+        background-color: $rouge;
+        transform: scaleX(0);
+        transition: transform 0.5s ease;
+      }
+      
+      .nav-item::before {
+        top: 0;
+        transform-origin: center right;
+      }
+      
+      .nav-item:hover::before {
+        transform-origin: center left;
+        transform: scaleX(1);
+      }
+      
+      .nav-item::after {
+        bottom: 0;
+        transform-origin: center left;
+      }
+      
+      .nav-item:hover::after {
+        transform-origin: center right;
+        transform: scaleX(1);
+      }
 }
 
 nav{
@@ -14,6 +50,9 @@ nav{
 .svg-background {
     display: flex;
     margin-top: -20px;
+}
+.active{
+    color: $jaune!important;
 }
 
 .container-fluid {
@@ -31,8 +70,8 @@ nav{
     width: 50%;
     color: $rouge;
     font-weight: 600;
-    margin: 20px 0;
-    padding: 0 15px !important;
+    margin: 20px 10px;
+    padding: 0 5px !important;
     border-right: 2px solid white;
     font-size: 20px;
     font-family: $overlock;

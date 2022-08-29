@@ -26,8 +26,8 @@
         <div class="collapse navbar-collapse" id="navbarCollapse">
             <div class="navbar-nav menu">
                 <div style="width:17%;display:flex;">
-                <a href="/" class="nav-item nav-link">Home</a>
-                <a href="/blog" class="no-border nav-item nav-link">Blog</a></div>
+                <a href="/" class="nav-item nav-link {{ (request()-> is('/*')) ? 'active' : '' }}">Home</a>
+                <a href="/blog" class="no-border nav-item nav-link {{ (request()-> is('blog*')) ? 'active' : '' }}" >Blog</a></div>
                 <a href="/" class="navbar-brand logo">
                     <span class="logo-container">
                     <svg width="117" height="143" viewBox="0 0 117 143" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -65,8 +65,8 @@
                     </span>
                     </a>
                     <div style="width:17%;display:flex;">
-                    <a href="#" class="nav-item nav-link">a propos</a>
-                    <a href="#" class="no-border nav-item nav-link">contact</a></div>
+                    <a href="/a-propos" class="nav-item nav-link {{ (request()-> is('a-propos*')) ? 'active' : '' }}">a propos</a>
+                    <a href="#" class="no-border nav-item nav-link {{ (request()-> is('contact*')) ? 'active' : '' }}">contact</a></div>
             </div>
         </div>
     </div>

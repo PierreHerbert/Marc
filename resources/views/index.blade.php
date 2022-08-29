@@ -5,7 +5,10 @@
     <section class="bandeau">
         <img src="{{asset('/images/bandeau-home.png')}}" alt="">
         <img class="border-bandeau"src="{{asset('/images/border-bandeau.png')}}" alt="">
-   
+        <div class="titre-head">
+                    <img src="{{asset('/images/head-titre.svg')}}" alt="">
+                    <h1>A TASTE OF MARC'S</h1>
+        </div>
     </section>
 
     <section class="categorie">

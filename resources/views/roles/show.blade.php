@@ -2,14 +2,8 @@
 
 <section>
     <div class="bg-light p-4 rounded">
-        <h1>{{ ucfirst($role->name) }} Role</h1>
-        <div class="lead">
-            
-        </div>
         
         <div class="container mt-4">
-
-            <h3>Assigned permissions</h3>
 
             <table class="table table-striped">
                 <thead>
