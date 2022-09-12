@@ -22,6 +22,10 @@ Route::group(['namespace' => 'App\Http\Controllers'], function()
     Route::get('/blog', 'BlogController@index')->name('blog'); 
     Route::get('/a-propos', 'AboutController@index')->name('about'); 
     Route::get('/posts/{post}/show', 'PostsController@show')->name('posts.show');
+
+    // ROUTE CONTACT
+    Route::get('/contact', 'ContactController@index')->name('contact');
+    Route::post('contact', 'ContactController@store')->name('contact.store');
     
 
     Route::group(['middleware' => ['guest']], function() {
@@ -89,4 +93,5 @@ Route::group(['namespace' => 'App\Http\Controllers'], function()
         Route::resource('roles', RolesController::class);
         Route::resource('permissions', 'PermissionsController');
     });
+
 });
