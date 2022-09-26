@@ -1,0 +1,64 @@
+// Contact
+
+
+#Contact{
+    .contact-bandeau {
+        margin-top: -190px;
+
+        img {
+            width: 100%;
+            height: auto;
+        }
+
+        .border-bandeau {
+            z-index: 2;
+            margin-top: -85px;
+            width: 100%;
+        }
+
+    }
+    .contact-formulaire{
+        display: flex;
+        .container-formulaire{
+            width: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            div{
+                border: none;
+            }
+            p{
+                padding: 0;
+                margin: 10px 0 0 0;
+                color: $jaune;
+                font-family: $quantico;
+                font-size: 20px;
+                font-weight: bold;
+            }
+            input,textarea{
+                background-color: #eaeaea;
+                border:none;
+                box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+                border-radius: 10px;
+                width: 400px;
+                font-family: $overlock;
+            }
+            form{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                button{
+                    margin-top: 15px!important;
+                }
+            }
+        }
+        .container-image{
+            margin: 15px 0;
+            width: 50%;
+            display: flex;align-items: center;
+            justify-content: center;
+        }
+    }
+
+    
+}

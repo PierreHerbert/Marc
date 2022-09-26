@@ -12666,3 +12666,59 @@ button svg {
   margin: auto;
 }
 
+#Contact .contact-bandeau {
+  margin-top: -190px;
+}
+#Contact .contact-bandeau img {
+  width: 100%;
+  height: auto;
+}
+#Contact .contact-bandeau .border-bandeau {
+  z-index: 2;
+  margin-top: -85px;
+  width: 100%;
+}
+#Contact .contact-formulaire {
+  display: flex;
+}
+#Contact .contact-formulaire .container-formulaire {
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#Contact .contact-formulaire .container-formulaire div {
+  border: none;
+}
+#Contact .contact-formulaire .container-formulaire p {
+  padding: 0;
+  margin: 10px 0 0 0;
+  color: #F2AF29;
+  font-family: "Quantico";
+  font-size: 20px;
+  font-weight: bold;
+}
+#Contact .contact-formulaire .container-formulaire input, #Contact .contact-formulaire .container-formulaire textarea {
+  background-color: #eaeaea;
+  border: none;
+  box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 10px;
+  width: 400px;
+  font-family: "Overlock";
+}
+#Contact .contact-formulaire .container-formulaire form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#Contact .contact-formulaire .container-formulaire form button {
+  margin-top: 15px !important;
+}
+#Contact .contact-formulaire .container-image {
+  margin: 15px 0;
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
