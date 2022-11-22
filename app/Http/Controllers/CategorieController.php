@@ -9,11 +9,6 @@ class CategorieController extends Controller
 {
 
 
-        /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
     public function index()
     {
         $categories = Categorie::latest()->paginate(10);
@@ -22,39 +17,31 @@ class CategorieController extends Controller
     }
 
 
-     /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
+    // retourne la vue pour créer 
     public function create()
     {
         return view('categorie.create');
     }
 
 
-     /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
+   // fonction qui enregistre une nouvelle catégorie
     public function store(Request $request)
     {
-        Categorie::create($request->only('nom'));
+        $validated = $request->validate([
+            'nom' => 'required|unique:categorie|max:255',
+        ]);
+
+        Categorie::create($validated);
+
+
 
         return redirect()->route('categorie.index')
-        ->withSuccess(__('Categorie created successfully.'));
+        ->withSuccess(__('La catégorie à été créé correctement'));
     }
 
 
 
-        /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  \App\Models\Categorie  $categorie
-     * @return \Illuminate\Http\Response
-     */
+    // retourne la vue d'édition en fonction de l'id
     public function edit(Categorie $categorie)
     {
         return view('categorie.edit', [
@@ -62,24 +49,22 @@ class CategorieController extends Controller
         ]);
     }
 
-     /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\Categorie  $categorie
-     * @return \Illuminate\Http\Response
-     */
+
+    // fonction qui met à jour la catégorie
     public function update(Request $request, Categorie $categorie)
     {
-
+        $validated = $request->validate([
+            'nom' => 'required|unique:categorie|max:255',
+        ]);
         
-        $categorie->update($request->only('nom'));
+        $categorie->update($validated);
 
         return redirect()->route('categorie.index')
             ->withSuccess(__('Categorie updated successfully.'));
     }
 
 
+    //fonction pour supprimer la catégorie
     public function destroy(Categorie $categorie)
     {
         $categorie->delete();

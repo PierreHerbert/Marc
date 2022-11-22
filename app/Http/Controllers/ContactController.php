@@ -7,21 +7,16 @@ use App\Models\Contact;
   
 class ContactController extends Controller
 {
-    /**
-     * Write code on Method
-     *
-     * @return response()
-     */
+
+
+    // retourne la vue contact
     public function index()
     {
         return view('contact');
     }
-  
-    /**
-     * Write code on Method
-     *
-     * @return response()
-     */
+
+
+    // fonction qui enregistre l'email envoyer
     public function store(Request $request)
     {
         $request->validate([
@@ -33,6 +28,6 @@ class ContactController extends Controller
         Contact::create($request->all());
   
         return redirect()->back()
-                         ->with(['success' => 'Merci pour votre message ! Nous voous contacterons dans les plus brefs délais.']);
+                         ->with(['success' => 'Merci pour votre message ! Nous vous contacterons dans les plus brefs délais.']);
     }
 }

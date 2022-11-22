@@ -44,7 +44,7 @@ class PostsController extends Controller
     {
         $image = $request->file('images');
         $image_name = $image->getClientOriginalName();
-        $image->move('./public_html/images/posts',$image_name); 
+        $image->move('./images/posts',$image_name); 
 
         Post::create(array_merge($request->only('title', 'description', 'body'),[
             'user_id' => auth()->id(),
@@ -97,7 +97,7 @@ class PostsController extends Controller
         $image = $request->file('images');
         if ($image != null){
             $image_name = $image->getClientOriginalName();
-            $image->move(public_path('images/posts'),$image_name); 
+            $image->move(public_path('./images/posts'),$image_name); 
         }
         else{
             $image_name = $post->images;
